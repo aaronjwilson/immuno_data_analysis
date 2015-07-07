@@ -7,7 +7,6 @@ Here the R programming language lends itself quite well with defined packages fo
 
 The basic data layout will be from .tsv files that have 
 1. categorical data: 
-``* ParticipantID
-``* GroupID
-
+  * ParticipantID
+  * GroupID
 2. numerical data: titrations from T100 to T409600
