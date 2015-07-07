@@ -21,7 +21,7 @@ The basic data layout will be from .tsv files that have
 2. ELISA Numerical Data
   * t100 - t409600 - Titration values. R cannot have a number as a header label so they are marked with a t.
 3. ELISpot Numerical Data
-  * generic hiv nomenclature for peptides.  They are in triplicate and env has two groupings represented as env1 and env2
+  * generic hiv nomenclature for peptides.  The assay was run with replicates and env has two groupings represented as env1 and env2
  
 # Outcomes 
 
