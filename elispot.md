@@ -50,7 +50,5 @@ data<-ddply(df, .( group, visitid, peptide.x), summarise, sfc=mean(sfc, na.rm=TR
 Plotted as barplot of peptdies versus spot forming cells and faceted by the groups
 ```R
 p<-ggplot(data, aes(x=factor(visitid), y=sfc, fill = peptide.x))
-#png(filename="${imgout:labkey0_png}",width=1200,height=700) # please labkey section for explaining this line
-
 p+geom_bar(stat='identity')+facet_wrap(~group, nrow=3)+labs(x="Visitid", y="SFC", title="ggplot based graph")
 ```
