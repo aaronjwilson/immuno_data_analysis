@@ -6,7 +6,13 @@ Curves can be analyzed a number of ways and often go by the terms: dose reponse 
 Here the R programming language lends itself quite well with defined packages for approaching the simple analytics found in the ELISpot assay to the more difficult aspects of curve fitting be they derived in an ELISA or some other methodology that creates nonlinear point classifications (MSD, Luminex, Titrations, Flow Cytometry).
 
 The basic data layout will be from .tsv files that have 
-1. categorical data: 
-  * ParticipantID
-  * GroupID
-2. numerical data: titrations from T100 to T409600
+
+1. Categorical Data:
+  * ParticipantId - sample identifier
+  * GroupId - cohort identifier
+  * VisitId - time point identifier
+2. ELISA Numerical Data
+  * T100 - T409600 - Titration values as R cannot have a number as a header label.
+3. ELISpot Numerical Data
+  * 
+
