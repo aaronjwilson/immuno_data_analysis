@@ -21,8 +21,8 @@ x<-read.table("data/elispot.tsv", header=T)
 
 # 2. Munging
 ```R
-y<-melt(x, id = c('participantid', 'participantid_cohort_label', 'timepoint'))
-names(y)<-c('pid', 'group', 'visitid', 'pep', 'sfc')
+y<-melt(x, id = c('participantid', 'groupid', 'visitid'))
+names(y)<-c('participantid', 'groupid', 'visitid', 'pep', 'sfc')
 
 #select only the first two letters of the category name
 y$peptide<-str_sub(y$pep,1,2)
@@ -30,25 +30,25 @@ y$peptide<-str_sub(y$pep,1,2)
 
 # 3. Aggregate the replicates
 ```R
-data<-ddply(y, .(pid, group, visitid, peptide), summarise, sfc=mean(sfc))
+data<-ddply(y, .(participantid, groupid, visitid, peptide), summarise, sfc=mean(sfc))
 ```
 
 # 4. Subtract Background
 ```R
 data.m<-data[data$peptide=="mo",]
 data.p<-data[data$peptide!='mo',]
-df<-merge(data.p, data.m, c('pid', 'visitid','group'))
+df<-merge(data.p, data.m, c('participantid', 'visitid','groupid'))
 df$sfc<-(df$sfc.x-df$sfc.y)
 ```
 
 # 5. Aggregate data by GroupId
 ```R
-data<-ddply(df, .( group, visitid, peptide.x), summarise, sfc=mean(sfc, na.rm=TRUE))
+data<-ddply(df, .( groupid, visitid, peptide.x), summarise, sfc=mean(sfc, na.rm=TRUE))
 ```
 
 # 6. Plot the buggers
 Plotted as barplot of peptdies versus spot forming cells and faceted by the groups
 ```R
 p<-ggplot(data, aes(x=factor(visitid), y=sfc, fill = peptide.x))
-p+geom_bar(stat='identity')+facet_wrap(~group, nrow=3)+labs(x="Visitid", y="SFC", title="ggplot based graph")
+p+geom_bar(stat='identity')+facet_wrap(~groupid, nrow=3)+labs(x="Visitid", y="SFC", title="ggplot based graph")
 ```
