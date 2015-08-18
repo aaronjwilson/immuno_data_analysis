@@ -13,7 +13,8 @@ lapply(b, require, character.only=T)
 x<-read.table("data/elispot.tsv", header=T)
 ```
 
-# 2. Munging - take the data from wide to long based upon categorical information
+# 2. Munging
+Pivot or "Reshape" the data from wide to long based upon categorical information
 ```R
 y<-melt(x, id = c('participantid', 'groupid', 'visitid'))
 names(y)<-c('participantid', 'groupid', 'visitid', 'pep', 'sfc')
@@ -29,9 +30,13 @@ data<-ddply(y, .(participantid, groupid, visitid, peptide), summarise, sfc=mean(
 
 # 4. Subtract Background
 ```R
+#pull out the background  from the raw data and create a column 'm' ("mock treated")
 data.m<-data[data$peptide=="mo",]
+#pull out the raw data to subtract background from: column 'p'
 data.p<-data[data$peptide!='mo',]
+#bring them all together
 df<-merge(data.p, data.m, c('participantid', 'visitid','groupid'))
+#create new column for final output
 df$sfc<-(df$sfc.x-df$sfc.y)
 ```
 
