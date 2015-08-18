@@ -28,7 +28,8 @@ y$peptide<-str_sub(y$pep,1,2)
 data<-ddply(y, .(participantid, groupid, visitid, peptide), summarise, sfc=mean(sfc))
 ```
 
-# 4. Subtract Background
+# 4. Subtract Background 
+Will reduce the noise of the system being tested.
 ```R
 #pull out the background  from the raw data and create a column 'm' ("mock treated")
 data.m<-data[data$peptide=="mo",]
