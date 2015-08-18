@@ -4,7 +4,7 @@ For the Elispot analysis my workflow consists of loading, munging, melting, aggr
 
 In the R landscape one can rarely go wrong with a package designed by Hadley Wickam.  Anything that he touches comes away with a very polished and professional appeal that is a delight to use.  The packages that I will be using in the ELISpot analysis are reshape2,  plyr, stringr and for graphics ggplot2.  Though I started with Lattice plots the quality and aesthetics of ggplot are beyond compare.
 
-# 1. Load libraries and data
+# 1. Load the necessary R libraries and data
 
 ```R
 b<-c('reshape2', 'ggplot2', 'plyr', 'stringr')
@@ -13,7 +13,7 @@ lapply(b, require, character.only=T)
 x<-read.table("data/elispot.tsv", header=T)
 ```
 
-# 2. Munging
+# 2. Munging - take the data from wide to long based upon categorical information
 ```R
 y<-melt(x, id = c('participantid', 'groupid', 'visitid'))
 names(y)<-c('participantid', 'groupid', 'visitid', 'pep', 'sfc')
