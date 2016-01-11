@@ -18,9 +18,9 @@ The basic data layout will be from .tsv files that have
   * participantId - sample identifier
   * groupId - cohort identifier
   * visitId - time point identifier
-2. ELISA Numerical Data
+2. [ELISA Numerical Data](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/data/elisa.tsv)
   * t100 - t409600 - Titration values. R cannot have a number as a header label so they are marked with a t.
-3. ELISpot Numerical Data
+3. [ELISpot Numerical Data](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/data/elispot.tsv)
   * generic hiv nomenclature for peptides.  The assay was run with replicates and env has two groupings represented as env1 and env2
  
 # Outcomes 
