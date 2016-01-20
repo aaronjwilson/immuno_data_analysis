@@ -10,7 +10,7 @@ In the R landscape one can rarely go wrong with a package designed by Hadley Wic
 b<-c('reshape2', 'ggplot2', 'plyr', 'stringr')
 lapply(b, require, character.only=T)
 
-x<-read.table("data/elispot.tsv", header=T)
+x<-read.table("data/elispot.tsv", sep='\t', header=T)
 ```
 
 # 2. Munging
