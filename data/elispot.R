@@ -1,7 +1,7 @@
 b<-c('reshape2', 'ggplot2', 'plyr', 'stringr')
 lapply(b, require, character.only=T)
 
-x<-read.table("elispot.tsv", header=T)
+x<-read.table("elispot.tsv", sep="\t", header=T)
 
 # 2. Munging
 
