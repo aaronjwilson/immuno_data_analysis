@@ -1,3 +1,6 @@
+#if the packages are not already installed then uncomment the following line. 
+#install.packages('reshape2', 'ggplot2', 'plyr', 'stringr', dep=T, repos="http://cran.rstudio.com/")
+
 b<-c('reshape2', 'ggplot2', 'plyr', 'stringr')
 lapply(b, require, character.only=T)
 
