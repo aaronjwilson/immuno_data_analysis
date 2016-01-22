@@ -5,7 +5,7 @@ x<-read.table("elispot.tsv", header=T)
 
 # 2. Munging
 
-y<-melt(x, id = c('participantid', 'groupid', 'visitid'))
+y<-melt(x, id = c('participantId', 'groupId', 'visitId'))
 names(y)<-c('participantid', 'groupid', 'visitid', 'pep', 'sfc')
 
 #select only the first two letters of the category name
