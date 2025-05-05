@@ -38,6 +38,10 @@ xx=1 #sheet number
 ###Pull in the ELISA DATA from google sheet
 x<-read_sheet(gg, range=paste("elisa", xx, sep = "_"))
 
+###Or bring in data from local source
+x<-read_csv("/data/ELISA_DRC_Data.tsv", header=T)
+
+
 ##set background cutoff
 ctof = x %>%
   group_by(visitid) %>%
