@@ -23,7 +23,7 @@ Flow Cytometry explorations happen here. [ICS boolean data analysis portion read
 # 4. Sundries: explorations of analysis of elispot or phenotypic flow cytometry data <br>
 
 [Elispot](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/elispot.md) <br>
-[Phenotype](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/Truncount.R) <br>
+[Phenotype](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/Trucount.R) <br>
 
 
 
