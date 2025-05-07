@@ -16,7 +16,7 @@ With that we can explore the journey towards interpolated endpoints in the [ELIS
 
 I still remember the day that the boolean gating in flowjo clicked for me and revealed the complexity of the immunological system (that still ceases to fascinate me) and more importantly the power of the flow cytometry methodology. Hats off to [Mario Roederer](https://www.drmr.com/) for spearheading and popularizing the incorporation of multifunctionality into the analytical zeitgeist of the late aughts. My own research foray into a TB mRNA vaccine showed the importance of a polyfunctional CD4 and CD8 cell in the efficacy of the treatment as revealed in the efficacy data. But limited funding and the needs of an IT department to be exclusively Windows for the bench scientists posed a problem when running analytical readouts from flow cytometry data.  FlowJo is partially agnostic to platform (Mac/PC: where is the linux port BD?). This is a means to an end to use R to analyze the data in a SPICE/PESTLE format. 
 
-
+Flow Cytometry explorations happen here. [ICS boolean data analysis portion readme](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/ICS_TB.md)
 
 # Notes on the Data used
 
