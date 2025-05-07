@@ -20,10 +20,10 @@ Flow Cytometry explorations happen here. [ICS boolean data analysis portion read
 
 # 3. dimensional reduction of alphabet soup.
 
-# 4. Sundries: explorations of analysis of elispot or phenotypic flow cytometry data
+# 4. Sundries: explorations of analysis of elispot or phenotypic flow cytometry data <br>
 
-[Elispot](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/elispot.md)
-[Phenotype](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/Truncount.R)
+[Elispot](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/elispot.md) <br>
+[Phenotype](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/Truncount.R) <br>
 
 
 
