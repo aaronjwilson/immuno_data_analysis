@@ -1,6 +1,6 @@
 setwd('/home/hduser/Data/R')
 list.files()
-x<-read.csv('nhp1601tru.csv', header=T)
+x<-read.csv('data/nhp1601tru.csv', header=T)
 head(x)
 
 library(reshape2)
