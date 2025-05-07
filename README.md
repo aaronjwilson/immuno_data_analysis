@@ -18,6 +18,15 @@ I still remember the day that the boolean gating in flowjo clicked for me and re
 
 Flow Cytometry explorations happen here. [ICS boolean data analysis portion readme](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/ICS_TB.md)
 
+# 3. dimensional reduction of alphabet soup.
+
+# 4. Sundries: explorations of analysis of elispot or phenotypic flow cytometry data
+
+[Elispot](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/elispot.md)
+[Phenotype](https://github.com/aaronjwilson/immuno_data_analysis/blob/master/Truncount.R)
+
+
+
 # Notes on the Data used
 
 The basic data layout will be from .tsv files that have 
